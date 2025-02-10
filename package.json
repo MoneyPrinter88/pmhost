@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@aws-amplify/ui-react": "^6.9.1",
-    "aws-amplify": "^6.12.3"
+    "@types/crypto-js": "^4.2.2",
+    "aws-amplify": "^6.12.3",
+    "crypto-js": "^4.2.0"
   }
 }
