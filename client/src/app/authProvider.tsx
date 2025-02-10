@@ -1,19 +1,17 @@
 import React from "react";
 import { Authenticator } from "@aws-amplify/ui-react";
-import { Amplify } from 'aws-amplify';
+import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
 
-const amplifyConfig = {
+Amplify.configure({
   Auth: {
-Cognito: {
-    userPoolId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID || "",
-    userPoolClientId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID || "",
-    userPoolClientSecret: process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET || "",
-  }
-  }
-};
-
-Amplify.configure(amplifyConfig);
+    Cognito: {
+      userPoolId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID || "",
+      userPoolClientId:
+        process.env.NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID || "",
+    },
+  },
+});
 
 const formFields = {
   signUp: {
@@ -44,16 +42,12 @@ const formFields = {
   },
 };
 
-interface AuthProviderProps {
-  children: React.ReactNode;
-}
-
-const AuthProvider = ({ children }: AuthProviderProps) => {
+const AuthProvider = ({ children }: any) => {
   return (
     <div>
       <Authenticator formFields={formFields}>
-        {({ user }) =>
-      user ? (
+        {({ user }: any) =>
+          user ? (
             <div>{children}</div>
           ) : (
             <div>

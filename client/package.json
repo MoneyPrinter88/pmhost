@@ -17,6 +17,7 @@
     "@reduxjs/toolkit": "^2.2.7",
     "aws-amplify": "^6.12.3",
     "axios": "^1.7.3",
+    "crypto-js": "^4.2.0",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "gantt-task-react": "^0.3.9",
@@ -33,6 +34,7 @@
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/lodash": "^4.17.7",
     "@types/node": "^20.14.14",
     "@types/numeral": "^2.0.5",
