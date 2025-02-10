@@ -5,12 +5,11 @@ import "@aws-amplify/ui-react/styles.css";
 
 Amplify.configure({
   Auth: {
-    Cognito: {
-      userPoolId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID || "",
-      userPoolClientId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID || "",
-      userPoolClientSecret: process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET || "",
-    },
-  },
+    region: 'us-east-1',
+    userPoolId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID,
+    userPoolWebClientId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID,
+    clientSecret: process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET,
+  }
 });
 
 const formFields = {
