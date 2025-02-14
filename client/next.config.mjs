@@ -7,9 +7,9 @@ const nextConfig = {
         hostname: "pm-s3-lt.s3.us-east-1.amazonaws.com",
         port: "",
         pathname: "/**",
-      },
-    ],
-  },
+      }
+    ]
+  }
 };
 
 export default nextConfig;
